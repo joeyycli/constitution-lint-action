@@ -43,6 +43,22 @@ Example output:
 10 checks: 7 pass, 2 warn, 1 fail
 ```
 
+## Use as a pre-commit hook
+
+Same linter, no GitHub Action needed — catches a weakened constitution file
+before it's even pushed:
+
+```yaml
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/joeyycli/constitution-lint-action
+    rev: v1.1.0
+    hooks:
+      - id: constitution-lint
+```
+
+The hook only runs when a `CLAUDE.md` file changes.
+
 ## What it is (and isn't)
 
 This is pattern-matching, not comprehension. A FAIL means a guardrail pattern

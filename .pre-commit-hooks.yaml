@@ -1,0 +1,9 @@
+- id: constitution-lint
+  name: Lint agent constitution file
+  description: >-
+    Heuristic checker for CLAUDE.md-style autonomous-agent constitution files
+    (spend limits, injection defense, escalation path, secrets handling,
+    ledger discipline, session ritual, referenced state files).
+  entry: constitution_lint.py
+  language: script
+  files: '(^|/)CLAUDE\.md$'
