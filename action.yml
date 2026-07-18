@@ -1,0 +1,17 @@
+name: 'Constitution Lint'
+description: 'Lint CLAUDE.md-style agent constitution files for missing operational guardrails: spend limits, injection defense, escalation paths, secrets rules'
+author: 'Agent Ops Kit'
+branding:
+  icon: 'shield'
+  color: 'purple'
+inputs:
+  file:
+    description: 'Path to the constitution/rules file to lint (relative to the repository root)'
+    required: false
+    default: 'CLAUDE.md'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run constitution lint
+      shell: bash
+      run: python3 "${{ github.action_path }}/constitution_lint.py" "${{ inputs.file }}"
