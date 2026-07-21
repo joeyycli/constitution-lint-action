@@ -1,0 +1,10 @@
+{
+  "name": "constitution-lint",
+  "description": "Lint a CLAUDE.md-style agent constitution for missing operational guardrails — 10 heuristic checks (spend limits, injection defense, escalation path, secrets handling, ledger discipline, session ritual, referenced state files). Adds a /lint-constitution command.",
+  "version": "1.2.0",
+  "author": { "name": "joeyycli" },
+  "homepage": "https://joeyycli.github.io/agent-ops-kit-guide/",
+  "repository": "https://github.com/joeyycli/constitution-lint-action",
+  "license": "MIT",
+  "keywords": ["claude-code", "claude-md", "lint", "ai-agents", "guardrails"]
+}
