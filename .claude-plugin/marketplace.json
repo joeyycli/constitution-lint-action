@@ -1,0 +1,14 @@
+{
+  "name": "constitution-lint",
+  "owner": { "name": "joeyycli" },
+  "metadata": {
+    "description": "Marketplace for the constitution-lint plugin — lint CLAUDE.md-style agent constitution files for missing operational guardrails."
+  },
+  "plugins": [
+    {
+      "name": "constitution-lint",
+      "source": ".",
+      "description": "Lint a CLAUDE.md-style agent constitution for missing operational guardrails — 10 heuristic checks, single stdlib-only Python script, no dependencies. Adds a /lint-constitution command."
+    }
+  ]
+}
