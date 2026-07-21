@@ -59,6 +59,19 @@ repos:
 
 The hook only runs when a `CLAUDE.md` file changes.
 
+## Use as a Claude Code plugin
+
+Same linter, inside Claude Code itself — adds a `/lint-constitution` command:
+
+```
+/plugin marketplace add joeyycli/constitution-lint-action
+/plugin install constitution-lint@constitution-lint
+```
+
+Then `/lint-constitution` lints the `CLAUDE.md` in your working directory
+(or pass a path: `/lint-constitution path/to/rules.md`) and explains any
+failing check. Costs ~31 always-on tokens per session.
+
 ## What it is (and isn't)
 
 This is pattern-matching, not comprehension. A FAIL means a guardrail pattern
