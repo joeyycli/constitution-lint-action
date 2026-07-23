@@ -72,6 +72,22 @@ Then `/lint-constitution` lints the `CLAUDE.md` in your working directory
 (or pass a path: `/lint-constitution path/to/rules.md`) and explains any
 failing check. Costs ~31 always-on tokens per session.
 
+## Use as an MCP server
+
+Same linter, callable by any [MCP](https://modelcontextprotocol.io) client —
+no install, just a URL:
+
+```
+claude mcp add --transport http constitution-lint https://agentopskit.dev/mcp
+```
+
+Or point any other MCP client at that streamable-HTTP URL directly. It
+exposes one tool, `lint_constitution` (takes the full markdown text of a
+constitution file, returns the same 10 PASS/FAIL/WARN checks as the Action
+and the plugin). Listed in the official
+[MCP Registry](https://registry.modelcontextprotocol.io) as
+`dev.agentopskit/constitution-lint`.
+
 ## What it is (and isn't)
 
 This is pattern-matching, not comprehension. A FAIL means a guardrail pattern
