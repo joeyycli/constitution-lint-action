@@ -166,5 +166,10 @@ def main(argv: list[str]) -> int:
     return lint(path)
 
 
+def main_entry() -> None:
+    """Console-script entry point (pip install constitution-lint)."""
+    raise SystemExit(main(sys.argv))
+
+
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv))
