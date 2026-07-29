@@ -88,6 +88,18 @@ and the plugin). Listed in the official
 [MCP Registry](https://registry.modelcontextprotocol.io) as
 `dev.agentopskit/constitution-lint`.
 
+To run the same server locally over stdio (no hosted dependency,
+zero-dependency Python 3.9+):
+
+```
+claude mcp add constitution-lint -- python3 /path/to/constitution_lint_mcp.py
+```
+
+or any MCP client config: `{"command": "python3", "args":
+["/path/to/constitution_lint_mcp.py"]}`. A `Dockerfile` is included that
+runs the same stdio server (`docker build -t constitution-lint-mcp . &&
+docker run -i --rm constitution-lint-mcp`).
+
 ## What it is (and isn't)
 
 This is pattern-matching, not comprehension. A FAIL means a guardrail pattern

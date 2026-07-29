@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "constitution-lint"
-version = "1.2.1"
+version = "1.3.0"
 description = "Heuristic checker for CLAUDE.md-style autonomous-agent constitution files: missing spend limits, injection defense, escalation paths, secrets handling."
 readme = "README.md"
 license = "MIT"
@@ -25,6 +25,7 @@ Repository = "https://github.com/joeyycli/constitution-lint-action"
 
 [project.scripts]
 constitution-lint = "constitution_lint:main_entry"
+constitution-lint-mcp = "constitution_lint_mcp:main"
 
 [tool.hatch.build.targets.wheel]
-include = ["constitution_lint.py"]
+include = ["constitution_lint.py", "constitution_lint_mcp.py"]
