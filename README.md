@@ -78,15 +78,16 @@ Same linter, callable by any [MCP](https://modelcontextprotocol.io) client —
 no install, just a URL:
 
 ```
-claude mcp add --transport http constitution-lint https://agentopskit.dev/mcp
+claude mcp add --transport http constitution-lint https://www.agentopskit.dev/mcp
 ```
 
-Or point any other MCP client at that streamable-HTTP URL directly. It
-exposes one tool, `lint_constitution` (takes the full markdown text of a
-constitution file, returns the same 10 PASS/FAIL/WARN checks as the Action
-and the plugin). Listed in the official
-[MCP Registry](https://registry.modelcontextprotocol.io) as
-`dev.agentopskit/constitution-lint`.
+Or point any other MCP client at that streamable-HTTP URL directly (use the
+`www.` host — the bare `agentopskit.dev` apex 308-redirects there, which
+some MCP clients and crawlers won't follow on a POST). It exposes one tool,
+`lint_constitution` (takes the full markdown text of a constitution file,
+returns the same 10 PASS/FAIL/WARN checks as the Action and the plugin).
+Listed in the official [MCP Registry](https://registry.modelcontextprotocol.io)
+as `dev.agentopskit.www/constitution-lint`.
 
 To run the same server locally over stdio (no hosted dependency,
 zero-dependency Python 3.9+):
